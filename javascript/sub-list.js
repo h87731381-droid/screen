@@ -19,6 +19,22 @@ let selectedOTT = [];           // 클릭해서 선택한 OTT
 
 
 
+const el_navTab = document.querySelectorAll('nav a');
+
+if (type == 'movie') {
+    el_navTab.forEach(function (a, i) {
+        a.classList.remove('active2');
+    });
+    el_navTab[0].classList.add('active2');
+} else {
+    el_navTab.forEach(function (a, i) {
+        a.classList.remove('active2');
+    });
+    el_navTab[1].classList.add('active2');
+}
+
+
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 //                     순서 정렬
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -193,8 +209,8 @@ let movieListOutput = function (movies) {
         let noImg = '/screen/image/img_noimage.jpg';
 
         el_list.innerHTML +=
-            `<figure>
-                <p class="poster slide click-area" data-href="${mov.id}" data-type="영화"><img class="click-area" draggable="false" src="${mov.poster_path == null ? noImg : img_path + mov.poster_path}" alt="영화포스터"></p>
+            `<figure class="slide click-area" data-href="${mov.id}" data-type="영화">
+                <p class="poster"><img draggable="false" src="${mov.poster_path == null ? noImg : img_path + mov.poster_path}" alt="영화포스터"></p>
                 <div class="objs-txt">
                     <p class="name">${mov.title}</p>
                     <p>${year} · ${genre.join(' / ')}</p>
@@ -270,14 +286,14 @@ let tvListOutput = function (tv) {
         let noImg = '/screen/image/img_noimage.jpg';
 
         el_list.innerHTML +=
-            `<figure>
-            <p class="poster slide click-area" data-href="${t.id}" data-type="TV"><img class="click-area" draggable="false" src="${t.poster_path == null ? noImg : img_path + t.poster_path}" alt="영화포스터"></p>
-            <div class="objs-txt">
-                <p class="name">${t.name}</p>
-                <p>${year} · ${genre.join(' / ')}</p>
-                <p>${t.vote_average.toFixed(1)}</p>
-            </div>
-        </figure>`;
+            `<figure class="slide click-area" data-href="${t.id}" data-type="TV">
+                <p class="poster"><img draggable="false" src="${t.poster_path == null ? noImg : img_path + t.poster_path}" alt="영화포스터"></p>
+                <div class="objs-txt">
+                    <p class="name">${t.name}</p>
+                    <p>${year} · ${genre.join(' / ')}</p>
+                    <p>${t.vote_average.toFixed(1)}</p>
+                </div>
+            </figure>`;
     });
 };
 

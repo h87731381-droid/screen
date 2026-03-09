@@ -316,7 +316,30 @@ article {
         height: 200px;
         display: none;
     }
+    
+    .wrapper .slide {
+        width: 120px;
+    }
 
+    .top10 .slide {
+        width: auto;
+        margin-left: 35px;
+    }
+    
+    .top10 .slide .img-wrap {
+        width: 200px;
+        aspect-ratio: 2 / 3;
+    }
+    
+    .top10 .slide span {
+        font-size: 80px;
+        left: -30px;
+    }
+
+    .top10 .slide .ten {
+        left: -50px;
+    }
+    
     .upcoming {
         display: none;
     }

@@ -47,31 +47,39 @@ header.active {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 12.5px 20px;
+    padding: 12.5px 20px 0;
 }
 
 .header-left {
     display: flex;
-    gap: 60px;
+    gap: 30px;
 }
 
 header nav {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 header nav.active {
     display: none;
 }
 
-header a {
+header .logo {
+    width: 132px;
+}
+
+header .nav-a {
     font-size: 20px;
     transition: 0.3s;
+    text-align: center;
+    width: 60px;
+    height: 46px;
+    padding-top: 5px;
 }
-header a:hover {
-    text-shadow: 0px 0px 10px #ffffff;
-    font-weight: bold;
+
+header .nav-a:hover {
+    color: #ff3535;
 }
 
 .header-search {
@@ -296,40 +304,12 @@ footer {
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     /*                         header                       */
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-    header {
-        height: 34px;
-        gap: 0;
-    }
-
     header.active {
-        height: 154px;
     }
 
-    .header-box {
-        padding: 7px 10px;
-    }
 
     .header-left {
         gap: 20px;
-    }
-
-    header .logo {
-        width: auto;
-        height: 20px;
-        display: flex;
-    }
-
-    header .logo img {
-        width: auto;
-        height: 100%;
-    }
-
-    header nav {
-        gap: 15px;
-    }
-
-    header a {
-        font-size: 12px;
     }
 
     .header-search.active {
@@ -360,16 +340,6 @@ footer {
 
     .header-search .recommend a {
         font-size: 12px;
-    }
-
-    .header-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .header-icon img {
-        width: 12px;
-        height: 12px;
     }
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -421,40 +391,17 @@ footer {
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     /*                         header                       */
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
     header {
-        height: 34px;
         gap: 0;
     }
 
     header.active {
-        height: 154px;
-    }
-
-    .header-box {
-        padding: 7px 10px;
+        height: 180px;
     }
 
     .header-left {
         gap: 20px;
-    }
-
-    header .logo {
-        width: auto;
-        height: 20px;
-        display: flex;
-    }
-
-    header .logo img {
-        width: auto;
-        height: 100%;
-    }
-
-    header nav {
-        gap: 15px;
-    }
-
-    header a {
-        font-size: 12px;
     }
 
     .header-search.active {
@@ -485,16 +432,6 @@ footer {
 
     .header-search .recommend a {
         font-size: 12px;
-    }
-
-    .header-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .header-icon img {
-        width: 12px;
-        height: 12px;
     }
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -561,7 +498,6 @@ footer {
     /*                         header                       */
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     header {
-        height: 34px;
         gap: 0;
     }
 
@@ -569,27 +505,20 @@ footer {
         height: 100px;
     }
 
-    .header-box {
-        padding: 7px 10px;
+    header .logo {
+        width: 100px;
+        padding-top: 5px;
+    }
+    header .logo img {
+        width: 100%;
     }
 
     .header-left {
-        gap: 20px;
-    }
-
-    header .logo {
-        width: auto;
-        height: 20px;
-        display: flex;
-    }
-
-    header .logo img {
-        width: auto;
-        height: 100%;
+        gap: 10px;
     }
 
     header nav {
-        gap: 15px;
+        gap: 10px;
     }
 
     header a {
@@ -630,16 +559,6 @@ footer {
 
     .header-search .recommend {
         display: none;
-    }
-
-    .header-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .header-icon img {
-        width: 12px;
-        height: 12px;
     }
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */

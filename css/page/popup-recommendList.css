@@ -77,7 +77,7 @@
 .recom-popup .title {
     width: 100%;
     font-size: 20px;
-    padding: 40px;
+    padding: 40px 20px 20px;
 }
 
 .recom-popup .contents {
@@ -86,6 +86,7 @@
     grid-template-columns: repeat(5, minmax(70px, 144px));
     justify-content: space-between;
     gap: 25px;
+    padding: 0 20px;
 }
 
 

@@ -1,5 +1,7 @@
-
-.popup .wrap { margin: 0 auto; z-index: 2000;} 
+.popup .wrap {
+    margin: 0 auto;
+    z-index: 2000;
+}
 
 /* 배경 */
 
@@ -7,17 +9,22 @@
 
 
 .popup .title {
+    width: 100%;
+    max-width: 840px;
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    padding-top: 60px;
+    padding: 60px 20px 0;
 }
+
 .popup .title-txt {
     padding-left: 0;
     flex: 1;
-    min-width: 0;   /* 🔥 이게 핵심 */
+    min-width: 0;
+    /* 🔥 이게 핵심 */
     width: 300px;
 }
+
 .popup-text span,
 .popup .title-txt p {
     word-break: break-word;
@@ -25,10 +32,21 @@
 
 
 
-.con p img{height:60px}
-.con p {flex-shrink: 0;}
-.con span {width: 40px; flex-shrink: 0;} /* 260305수정 */
-.con2 p{
+
+.con a {
+    max-width: 100px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.con span {
+    width: 40px;
+    flex-shrink: 0;
+}
+
+/* 260305수정 */
+.con2 p {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -60,20 +78,21 @@
 }
 
 .act::-webkit-scrollbar-thumb:hover {
-    background-color: #e02e2e; /* 마우스 오버시 색상 변화 */
+    background-color: #e02e2e;
+    /* 마우스 오버시 색상 변화 */
 }
 
 
 
 /* 팝업 전체 배경 */
 .popup-wrap {
-    
+
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,43 +106,84 @@
 /* 팝업창 */
 .popup {
     width: 100%;
-    max-width: 800px;
+    /* max-width: 800px; */
     height: 90vh;
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
     overflow-y: auto;
     overflow-x: hidden;
 
-    
-    scrollbar-width: none;      /* Firefox */
-    -ms-overflow-style: none;   /* IE, Edge */
+
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE, Edge */
+}
+
+.hig {
+    width: 100%;
+    max-width: 840px;
+    padding: 100px 20px 0;
+}
+
+.actor {
+    width: 100%;
+    max-width: 840px;
+    padding: 100px 20px 0;
+}
+
+.content-mov {
+    width: 100%;
+    max-width: 840px;
+    padding: 100px 20px;
+}
+
+.mov-img {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px auto;
+}
+
+.episode {
+    width: 100%;
+    max-width: 840px;
+    padding: 100px 20px;
 }
 
 
 
 /* 닫기 버튼 */
 
-.btn-x{
+.btn-x {
     position: absolute;
 
 }
 
 
 #close-btn {
-    right: 25px; top: 25px;
+    right: 25px;
+    top: 25px;
     cursor: pointer;
 
 }
-#close-btn img{width:100%}
+
+#close-btn img {
+    width: 100%
+}
 
 
- 
-   
+
+
 /* 전체 페이지 */
 
 .popup::-webkit-scrollbar,
 .popup::-webkit-scrollbar {
-    display: none;              /* Chrome, Safari */
+    display: none;
+    /* Chrome, Safari */
 }
 
 .act::-webkit-scrollbar:horizontal {
@@ -132,34 +192,37 @@
 
 .container::-webkit-scrollbar-track:horizontal {
     background: transparent;
-}   
+}
 
 
 
-.loader{
-  margin: 0 0 2em;
-  height: 100px;
-  width: 20%;
-  text-align: center;
-  padding: 1em;
-  margin: 0 auto 1em;
-  display: inline-block;
-  vertical-align: top;
-  color:white;position:absolute;left:40%;top:45%;
+.loader {
+    margin: 0 0 2em;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    position: absolute;
+    left: 40%;
+    top: 45%;
 }
 
 /*
   Set the color of the icon
 */
 svg path,
-svg rect{
-  fill: #ff3535;
+svg rect {
+    fill: #ff3535;
 }
 
 .popup .slide img {
-    
+
     object-fit: cover;
-  
+
 }
 
 .details-main {
@@ -186,19 +249,31 @@ svg rect{
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 1px 1px 10px 0px rgb(53, 53, 53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .mov-img p img {
+    /* object-fit: cover; */
     height: 100%;
+    transition: 0.3s;
+}
+
+.mov-img p:hover img {
+    transform: scale(1.05);
 }
 
 .popup .title .poster {
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     aspect-ratio: 2 / 3;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
+
 .popup .title .poster img {
     object-fit: cover;
 }
@@ -207,28 +282,80 @@ svg rect{
     border-radius: 10px;
     overflow: hidden;
 }
+
 /* 260305 추가 */
-.con2 p.active{
-    -webkit-line-clamp:unset;
-    overflow:visible;
+.con2 p.active {
+    -webkit-line-clamp: unset;
+    overflow: visible;
 }
-.con2 p{
+
+.con2 p {
     padding-top: 10px;
 }
 
-.con{
+.con {
     display: flex;
     align-items: flex-start;
 }
-.con-box{
+
+.con-box .con-img-wrap {
+    width: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+.con-box .con-img-wrap > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.con-box {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.con-box span{
-display: inline;
+
+.con-box span {
+    display: inline;
 }
-.popup-text span.active{
-    -webkit-line-clamp:unset;
-    overflow:visible;
+
+.con2 .ep-num {
+    padding-right: 5px;
+}
+
+.popup-text span.active {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+@media screen and (min-width:481px) and (max-width:1024px) {
+    .hig, .actor, .content-mov {
+        padding-top: 40px;
+    }
+}
+@media screen and (max-width:480px) {
+    .hig, .actor, .content-mov {
+        padding-top: 40px;
+    }
+    .con>.con-box>a {
+        max-width: 70px;
+    }
+
+    .con>.con-box>a>img {
+        object-fit: cover;
+    }
+
+    .act-profi > p {
+        width: 70px !important;
+    }
+
+    .content-mov {
+        padding: 0;
+    }
+    .content-mov > b {
+        padding: 0 20px;
+    }
 }

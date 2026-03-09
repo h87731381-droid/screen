@@ -1,6 +1,10 @@
 @import url(../reset.css);
 @import url(../common.css);
 
+header nav a.active2 {
+    border-bottom: 2px solid #ff3535;
+}
+
 .search-section {
     width: 100%;
     max-width: 1680px;

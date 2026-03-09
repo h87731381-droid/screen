@@ -64,10 +64,10 @@ let searchFun = async function (keyword) {
     let movieData = await res.json();
 
     // TV 검색
-    let res2 = await fetch(`https://api.themoviedb.org/3/search/tv?query=${encodeURIComponent(keyword)}&api_key=be70ce351ebf9cdf3c901d28de3db6a3&language=ko-KRwatch_region=KR`);
+    let res2 = await fetch(`https://api.themoviedb.org/3/search/tv?query=${encodeURIComponent(keyword)}&api_key=be70ce351ebf9cdf3c901d28de3db6a3&language=ko-KR&watch_region=KR`);
     let tvData = await res2.json();
 
-    let res3 = await fetch(`https://api.themoviedb.org/3/search/person?api_key=be70ce351ebf9cdf3c901d28de3db6a3&query=${encodeURIComponent(keyword)}&language=ko-KRwatch_region=KR`);
+    let res3 = await fetch(`https://api.themoviedb.org/3/search/person?api_key=be70ce351ebf9cdf3c901d28de3db6a3&query=${encodeURIComponent(keyword)}&language=ko-KR&watch_region=KR`);
     let personData = await res3.json();
 
     datasets = [
@@ -77,16 +77,16 @@ let searchFun = async function (keyword) {
     ];
 
 
-    let a=[],b=[];
-    if(personData.results.length){
-        personData.results[0].known_for.forEach(function(값){
-            값.media_type == 'movie' ?  a.push(값) : b.push(값);
+    let a = [], b = [];
+    if (personData.results.length) {
+        personData.results[0].known_for.forEach(function (값) {
+            값.media_type == 'movie' ? a.push(값) : b.push(값);
         })
 
         datasets[0].data = [...movieData.results, ...a];
         datasets[1].data = [...tvData.results, ...b];
     }
-    
+
 
 
     datasets.sort(function (a, b) {
@@ -358,10 +358,14 @@ searchEvent();
 // 💡 메인에서 검색하면 검색페이지로 이동해서 바로 보이는 화면
 let params = new URLSearchParams(document.location.search);
 let keyword = params.get("keyword");
-searchFun(keyword);
-el_searchTitle.innerText = `"${keyword}" 검색결과`;
 
-
+if (!keyword) {
+    $('form').preventDefault();
+    alert('검색어를 입력해주세요.');
+} else {
+    searchFun(keyword);
+    el_searchTitle.innerText = `"${keyword}" 검색결과`;
+}
 
 // 검색리스트에 작품 클릭시 팝업 띄우기
 let etc = '';
