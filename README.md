@@ -4,6 +4,9 @@
 <img src="./README-image4.PNG">
 <img src="./README-image5.PNG">
 <img src="./README-image6.PNG">
+<img src="./README-image7.PNG">
+<img src="./README-image8.PNG">
+<img src="./README-image9.PNG">
 
 <h2>🎬 Screen – Movie & TV Explorer</h2>
 <p>👋 Hello, I'm Hyun Ju </p>
