@@ -1,7 +1,9 @@
-<img src="./images/README-image.jpg">
-<img src="./images/README-image2.jpg">
-<img src="./images/README-image3.jpg">
-<img src="./images/README-image4.jpg">
+<img src="./README-image.PNG">
+<img src="./README-image2.PNG">
+<img src="./README-image3.PNG">
+<img src="./README-image4.PNG">
+<img src="./README-image5.PNG">
+<img src="./README-image6.PNG">
 
 <h2>🎬 Screen – Movie & TV Explorer</h2>
 <p>👋 Hello, I'm Hyun Ju </p>
