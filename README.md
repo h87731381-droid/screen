@@ -170,7 +170,58 @@
 </pre>
 
 <h2>💻 개발 환경</h2>
-<h3>개발 도구</h3>
+<h3>1. Front-End</h3>
+<table>
+  <thead>
+    <tr>
+      <th>사용기술</th>
+      <th>설명</th>
+      <th>Badge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTML</td>
+      <td>웹 페이지 구조 및 마크업</td>
+      <td><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"></td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>레이아웃 및 스타일링</td>
+      <td><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"></td>
+    </tr>
+    <tr>
+      <td>JavaScript</td>
+      <td>DOM 조작 및 이벤트 처리</td>
+      <td><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"></td>
+    </tr>
+    <tr>
+      <td>jQuery</td>
+      <td>동적 기능 구현 및 데이터 처리</td>
+      <td><img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>2. API</h3>
+<table>
+  <thead>
+    <tr>
+      <th>사용기술</th>
+      <th>설명</th>
+      <th>Badge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TMDB API</td>
+      <td>영화 및 TV 콘텐츠 데이터 제공</td>
+      <td><img src="https://img.shields.io/badge/TMDB_API-01D277?style=flat-square&logo=themoviedatabase&logoColor=white"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>3. 개발 도구</h3>
 <table>
   <thead>
     <tr>
