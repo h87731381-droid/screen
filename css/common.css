@@ -1,0 +1,700 @@
+body {
+    background-color: #1A1A1A;
+    color: white;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/*  input 기본값 없애기
+input,
+    input:autofill,
+    input:autofill:hover,
+    input:autofill:focus,
+    input:autofill:active {
+        배경 투명
+        box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+
+        글자색
+        -webkit-text-fill-color: #ffffff !important;
+} */
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/*                         header                       */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 140px;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    transition: 0.4s;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+header.active {
+    height: 380px;
+}
+
+.header-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12.5px 20px;
+}
+
+.header-left {
+    display: flex;
+    gap: 60px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav.active {
+    display: none;
+}
+
+header a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+header a:hover {
+    text-shadow: 0px 0px 10px #ffffff;
+    font-weight: bold;
+}
+
+.header-search {
+    width: 100%;
+    display: none;
+}
+
+.header-search.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-search-box {
+    width: 425px;
+    height: 40px;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.header-search-box input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.header-search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+}
+
+.header-search-box input:focus {
+    outline: none;
+}
+
+.header-search-box input:focus::placeholder {
+    color: transparent;
+}
+
+.header-search-box button {
+    width: 15px;
+    height: 15px;
+    background: url(/screen/image/ic_search.svg) center center / cover no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header-search .recommend {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-search .recommend div {
+    display: flex;
+    gap: 10px;
+}
+
+.header-search a {
+    font-size: 14px;
+    background-color: rgba(26, 26, 26, 0.7);
+    border: 1px solid #84868D;
+    border-radius: 99px;
+    padding: 5px 10px;
+
+    text-align: center;
+}
+
+.header-icon {
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header-icon.active {
+    border: 0;
+}
+
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/*                         footer                       */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+footer {
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(rgba(26, 26, 26, 0), rgba(126, 30, 30));
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-box {
+    margin: 20px;
+
+}
+
+.footer-text {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.footer-text div {
+    display: flex;
+    gap: 20px
+}
+
+.contour::after {
+    content: '│';
+    padding: 0 10px;
+}
+
+/* ====================================================== */
+
+/* 커서 기본 원 */
+.cursor {
+    z-index: 99999999;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* border: 2px solid red; */
+    background: rgba(255, 53, 53, 0);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* 회전 텍스트 */
+.cursor-text {
+    display: none;
+    animation: rotate 6s linear infinite;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.cursor-text span {
+    position: absolute;
+    font-size: 5px;
+    white-space: nowrap;
+    line-height: 5px;
+    letter-spacing: -0.1px;
+}
+
+/* 기본 회전 */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        
+    }
+    100% {
+        transform: rotate(360deg);
+        
+    }
+}
+
+/* 클릭 hover */
+.cursor.click-hover .cursor-text {
+    display: flex;
+}
+.cursor.click-hover {
+    background: rgba(255, 53, 53, 0.8);
+    transform: translate(-50%, -50%) scale(4);
+}
+
+/* 드래그 hover */
+.cursor.drag-hover .cursor-text {
+    display: flex;
+}
+.cursor.drag-hover {
+    background: rgba(255, 53, 53, 0.8);
+    transform: translate(-50%, -50%) scale(4);
+}
+
+/* 마우스 누름 */
+.cursor.active {
+    background: rgba(201, 181, 0, 0.8);
+    transform: translate(-50%, -50%) scale(4);
+}
+
+.cursor.active .cursor-text {
+    display: flex;
+}
+
+.cursor.pause .cursor-text {
+  animation-play-state: paused;
+}
+
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /*                         header                       */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    header {
+        height: 34px;
+        gap: 0;
+    }
+
+    header.active {
+        height: 154px;
+    }
+
+    .header-box {
+        padding: 7px 10px;
+    }
+
+    .header-left {
+        gap: 20px;
+    }
+
+    header .logo {
+        width: auto;
+        height: 20px;
+        display: flex;
+    }
+
+    header .logo img {
+        width: auto;
+        height: 100%;
+    }
+
+    header nav {
+        gap: 15px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    .header-search.active {
+        gap: 10px;
+    }
+
+    .header-search-box input {
+        font-size: 12px;
+    }
+
+    .header-search-box input::placeholder {
+        font-size: 12px;
+    }
+
+    .header-search-box button {
+        width: 15px;
+        height: 15px;
+    }
+
+    .header-search-box input {
+        font-size: 12px;
+        padding-bottom: 3px;
+    }
+
+    .header-search .recommend {
+        font-size: 12px;
+    }
+
+    .header-search .recommend a {
+        font-size: 12px;
+    }
+
+    .header-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-icon img {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /*                         footer                       */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    footer {
+        width: 100%;
+        height: 150px;
+        font-size: 10px;
+    }
+
+    footer .logo {
+        width: auto;
+        height: 20px;
+        display: flex;
+    }
+
+    footer .logo img {
+        width: auto;
+        height: 100%;
+    }
+
+    .footer-box {
+        margin: 10px;
+    }
+
+    .footer-text {
+        padding: 3px 0;
+        gap: 20px;
+    }
+
+    .footer-text div {
+        display: flex;
+        gap: 0px;
+    }
+
+    .footer-text .text b {
+        padding-right: 5px;
+    }
+
+    .contour::after {
+        padding: 0 5px;
+    }
+}
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /*                         header                       */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    header {
+        height: 34px;
+        gap: 0;
+    }
+
+    header.active {
+        height: 154px;
+    }
+
+    .header-box {
+        padding: 7px 10px;
+    }
+
+    .header-left {
+        gap: 20px;
+    }
+
+    header .logo {
+        width: auto;
+        height: 20px;
+        display: flex;
+    }
+
+    header .logo img {
+        width: auto;
+        height: 100%;
+    }
+
+    header nav {
+        gap: 15px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    .header-search.active {
+        gap: 10px;
+    }
+
+    .header-search-box input {
+        font-size: 12px;
+    }
+
+    .header-search-box input::placeholder {
+        font-size: 12px;
+    }
+
+    .header-search-box button {
+        width: 15px;
+        height: 15px;
+    }
+
+    .header-search-box input {
+        font-size: 12px;
+        padding-bottom: 3px;
+    }
+
+    .header-search .recommend {
+        font-size: 12px;
+    }
+
+    .header-search .recommend a {
+        font-size: 12px;
+    }
+
+    .header-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-icon img {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /*                         footer                       */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    footer {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    footer .logo {
+        width: auto;
+        height: 20px;
+        display: flex;
+    }
+
+    footer .logo img {
+        width: auto;
+        height: 100%;
+    }
+
+    .footer-box {
+        margin: 10px;
+    }
+
+    .footer-text {
+        padding: 3px 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-text:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .footer-text:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .footer-text div {
+        display: flex;
+        gap: 0px;
+    }
+
+    .footer-text .text b {
+        padding-right: 5px;
+    }
+
+    .contour::after {
+        padding: 0 5px;
+    }
+}
+
+/* 모바일 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /*                         header                       */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    header {
+        height: 34px;
+        gap: 0;
+    }
+
+    header.active {
+        height: 100px;
+    }
+
+    .header-box {
+        padding: 7px 10px;
+    }
+
+    .header-left {
+        gap: 20px;
+    }
+
+    header .logo {
+        width: auto;
+        height: 20px;
+        display: flex;
+    }
+
+    header .logo img {
+        width: auto;
+        height: 100%;
+    }
+
+    header nav {
+        gap: 15px;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    .header-search.active {
+        gap: 10px;
+    }
+
+    .header-search-box {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 20px;
+    }
+
+    .header-search-box.active {
+        width: 90%;
+    }
+
+    .header-search-box input {
+        font-size: 12px;
+    }
+
+    .header-search-box input::placeholder {
+        font-size: 12px;
+    }
+
+    .header-search-box button {
+        width: 15px;
+        height: 15px;
+    }
+
+    .header-search-box input {
+        font-size: 12px;
+        padding-bottom: 3px;
+    }
+
+    .header-search .recommend {
+        display: none;
+    }
+
+    .header-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-icon img {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /*                         footer                       */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    footer {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    footer .logo {
+        width: auto;
+        height: 20px;
+        display: flex;
+    }
+
+    footer .logo img {
+        width: auto;
+        height: 100%;
+    }
+
+    .footer-box {
+        margin: 10px;
+    }
+
+    .footer-text {
+        padding: 3px 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-text:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .footer-text:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .footer-text div {
+        display: flex;
+        gap: 0px;
+    }
+
+    .footer-text .text b {
+        padding-right: 5px;
+    }
+
+    .contour::after {
+        padding: 0 5px;
+    }
+}

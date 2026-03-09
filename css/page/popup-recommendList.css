@@ -1,0 +1,145 @@
+@import url(../reset.css);
+@import url(../common.css);
+
+.recom-popup-wrap {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.X {
+    position: relative;
+}
+
+.recom-btn-x {
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    cursor: pointer;
+    /* 커서 바꾸기 */
+}
+
+.recom-popup {
+    height: 90vh;
+    border-radius: 40px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    border: 1px solid #383838;
+    padding: 0 100px;
+
+    overflow-y: auto;
+    /* 세로 스크롤바 생성 */
+    scrollbar-color: transparent transparent;
+    /* 스크롤바 가리기 */
+}
+
+.recom-popup-wrap .btn-x img {
+    width: 18px;
+    height: 18px;
+}
+
+
+.recom-popup-wrap .contents a {
+    display: block;
+    width: 144px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    box-shadow: 1px 1px 10px 0px rgb(53, 53, 53);
+}
+
+.recom-popup-wrap img {
+    height: 100%;
+    transition: 0.3s;
+}
+
+.recom-popup-wrap img:hover {
+    transform: scale(1.05);
+}
+
+.recom-popup article {
+    width: 800px;
+    padding: 50px 0 70px 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.recom-popup .title {
+    width: 100%;
+    font-size: 20px;
+    padding: 40px;
+}
+
+.recom-popup .contents {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(70px, 144px));
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+
+
+
+/* ----------------------반응형---------------------------- */
+
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+    .recom-popup {
+        margin: 0 15px;
+        padding: 0;
+    }
+
+    .recom-popup article {
+        width: 80%;
+    }
+
+    .recom-popup .contents {
+        grid-template-columns: repeat(4, minmax(70px, 144px));
+    }
+}
+
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+    .recom-popup {
+        margin: 0 15px;
+        padding: 0 10px;
+    }
+
+    .recom-popup article {
+        width: 80%;
+    }
+
+    .recom-popup .contents {
+        grid-template-columns: repeat(3, minmax(70px, 144px));
+    }
+}
+
+/* 모바일 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    .recom-popup {
+        margin: 0 15px;
+        padding: 0 10px;
+    }
+
+    .recom-popup article {
+        width: 80%;
+    }
+
+    .recom-popup .contents {
+        grid-template-columns: repeat(2, minmax(70px, 144px));
+    }
+}

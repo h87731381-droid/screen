@@ -1,0 +1,13 @@
+/* reset.css (태그 초기화) */
+body {
+    margin: 0;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+                 'Noto Sans KR', sans-serif;
+}
+* { box-sizing: border-box; }
+img { vertical-align: middle; }
+a {color: white; text-decoration: none;}
+ul, li { margin: 0; padding: 0; list-style-type: none; }
+h1, h2, h3, p, figure { margin: 0; }
+table { border-collapse: collapse; }

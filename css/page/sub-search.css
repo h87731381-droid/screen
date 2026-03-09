@@ -1,0 +1,408 @@
+@import url(../reset.css);
+@import url(../common.css);
+
+body.popup-open {
+    overflow: hidden;
+}
+
+.top-back {
+    width: 100%;
+    height: 380px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../image/test_imgB02.jpg) center center / cover no-repeat; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-search {
+    display: flex !important;   /* common.css에 display: none; 덮어씌워버리게 !important */
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.scMain .search b {
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+
+button {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+/*----------제목-------------------------*/
+h3 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/*----------000검색결과 타이틀----------*/
+.scMain {
+    width: 1680px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+/*---------- 메뉴 공통 스타일 ----------------------------------------*/
+.scMenu {
+    display: flex;
+    gap: 10px;
+}
+
+.scMenu button {
+    color: #84868D;
+    font-weight: 600;
+    border: 1px solid #84868D;
+    border-radius: 10px;
+    padding: 10px 18px;
+}
+
+/*-----------버튼 클릭시 공통 스타일------------------------------------------*/
+.scMain .scMenu>button.active {
+    background-color: #FF3535;
+    color: white;
+    box-shadow: inset 0 10px 15px -15px rgba(255, 255, 255, 0.7), inset 0 10px 15px -10px rgba(255, 255, 255, 0.7);
+    border: none;
+}
+
+
+/*------------------------------
+----------전체-영화&TV 검색결과----------*/
+.search {
+    padding: 60px 0 30px 0;
+    display: flex;
+}
+
+.imgs-wrap {
+    width: 200px;
+    aspect-ratio: 2 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.imgs-wrap img {
+    object-fit: cover;
+    transition: 0.3s; /* 애니메이션 부드럽게 */
+    
+}
+
+.imgs-wrap:hover img {  /* :hover 해당 태그에 마우스를 올리면 */
+    transform: scale(1.05); /* 1.05배 만큼 커지게 변경 */
+}
+
+.searchAll .searchList {
+    display: flex;
+    width: 100%;
+    column-gap: 20px;
+}
+
+.searchAll .searchList>figure {
+    width: 192px;
+}
+.searchAll>div>figure .detail {
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.searchAll>div>figure b {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 7px 0 0 0;
+}
+
+/*------------------------------
+----------전체-인물 검색결과----------*/
+
+.searchAll .searchH {
+    display: flex;
+    gap: 20px;
+}
+
+.imgsH-wrap {
+    overflow: hidden;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+.imgsH-wrap img {
+    object-fit: cover;
+
+    width: 100%;
+    transition: 0.3s; /* 애니메이션 부드럽게 */
+
+}
+.imgsH-wrap:hover img {  /* :hover 해당 태그에 마우스를 올리면 */
+    transform: scale(1.05); /* 1.05배 만큼 커지게 변경 */
+}
+
+.searchAll .searchH>figure {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.searchAll .searchH>figure>.detail {
+    font-size: 14px;
+    padding: 5px 0 0 0;
+}
+
+.search-wrap {
+    padding: 0 0 200px 0;
+}
+
+
+/*--------------------------------------
+----------영화&TV 카테고리 검색결과----------*/
+
+.searchList figure {
+    padding: 20px 0;
+}
+
+
+/*--------------------------------------
+----------인물 카테고리 검색결과----------*/
+
+
+.sc_all {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 50px 0 0 0;
+}
+
+.sc_HS {
+    gap: 50px;
+    padding: 20px;
+    border-bottom: 0.1px solid #353535;
+    display: flex;
+    align-items: center;
+
+    width: 49%;
+}
+
+.sc_HS>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+.sc_note {
+    display: flex;
+    padding: 0 0 5px 0;
+    gap: 20px;
+}
+
+.sc_HS>figcaption>b {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.sc_HS .sc_HSF .sc_note>p {
+    text-decoration: none;
+}
+
+.sc_note2 {
+    display: flex;
+    gap: 10px;
+}
+
+.sc_note2>p {
+    background-color: #353535;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.searchH,
+.sc_all,
+.searchList {
+    padding-bottom: 20px;
+}
+
+header .header-icon {
+    /* 검색 페이지에서는 헤더 돋보기 아이콘 안보이게 */
+    display: none;
+}
+
+header .header-search {
+    /* 검색 페이지에서는 헤더 검색창 안나오게 */
+    display: none;
+}
+
+/*---------------------------------------------------------------
+--------------------------반응형---------------------------------*/
+
+
+/*1680*/
+@media screen and (max-width:1680px) {
+
+    .top-back {
+        margin-left: -5.2%;
+        margin-right: -5.2%;
+        width: auto;
+    }
+
+    .searchH {
+        display: flex;
+
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .searchH::-webkit-scrollbar {
+        height: 5px;
+        /* 가로 스크롤바 두께 */
+    }
+
+    .searchH::-webkit-scrollbar-thumb {
+        background: #FF3535;
+        border-radius: 5px;
+    }
+
+    .searchH::-webkit-scrollbar-track {
+        background: #e0e0e0;
+    }
+
+    main {
+        padding: 0 5%;
+    }
+
+    .scMain {
+        width: 100%;
+    }
+
+    .searchAll {
+        padding-bottom: 20px;
+    }
+
+    .searchList {
+        overflow-x: auto;
+        white-space: nowrap;
+
+    }
+
+    .searchList::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .searchList::-webkit-scrollbar-thumb {
+        background: #FF3535;
+        border-radius: 5px;
+    }
+
+    .searchAll::-webkit-scrollbar-track,
+    .searchList::-webkit-scrollbar-track {
+        background: #e0e0e0;
+    }
+
+    .searchList>button {
+        margin-bottom: 50px;
+    }
+}
+
+/* 태블릿 가로 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    main {
+        padding: 0 5%;
+    }
+
+    .searchList_at {
+        column-gap: 26px;
+    }
+
+    .sc_HS {
+        width: 49%;
+    }
+
+    .searchList_at>figure {
+        width: 100%;
+        height: auto;
+    }
+
+    .sc_note2>p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+}
+
+/* 모바일 가로 & 테블릿 세로*/
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+    main {
+        padding: 0 4%;
+    }
+
+    .searchList_at {
+        column-gap: 5px;
+    }
+
+    .scMain {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .searchAll>div>figure>img {
+        border-radius: 10px;
+        width: 160px;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .sc_note2>p {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .sc_HS {
+        width: 500px;
+    }
+}
+
+/* 모바일 세로*/
+@media all and (max-width: 479px) {
+    .top-back {
+        height: 200px;
+    }
+
+    main {
+        padding: 0 3%;
+    }
+
+    .sc_HS {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .sc_note2>p {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .searchH,
+    .sc_all,
+    .searchList {
+        column-gap: 10px;
+        padding-bottom: 15px;
+    }
+}

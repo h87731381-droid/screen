@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="/screen/css/index.css">
+    <link rel="stylesheet" href="/screen/css/page/popup-recommendList.css">
+    <link rel="stylesheet" href="/screen/css/page/popup-filmography.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="/screen/javascript/common.js"></script>
+    <script defer src="/screen/javascript/index.js"></script>
+    <script src="/screen/javascript/popup-recommendList.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-box">
+            <div class="header-left">
+                <a class="logo" href="/screen/index.html"><img src="/screen/image/logo-screen.svg" alt="로고"></a>
+                <nav>
+                    <a href="/screen/pages/sub-list.html?type=movie">영화</a>
+                    <a href="/screen/pages/sub-list.html?type=tv">TV</a>
+                </nav>
+            </div>
+
+            <p class="header-icon"><img src="/screen/image/ic_search.svg" alt="검색아이콘"></p>
+        </div>
+
+        <div class="header-search">
+            <form class="header-search-box" action="/screen/pages/sub-search.html" autocomplete="off">
+                <input type="text" autocomplete="off" placeholder="검색어를 입력해 주세요" name="keyword">
+                <button></button>
+            </form>
+            <div class="recommend">
+                <b>추천 검색어</b>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 커서 -->
+    <div class="cursor">
+        <div class="cursor-text">
+            <span></span>
+        </div>
+    </div>
+
+    <main>
+        <div class="main-top">
+            <div class="video-wrap">
+                <iframe name="video" src="" frameborder="0" allow="autoplay; encrypted-media;"></iframe>
+            </div>
+            
+            <div class="dark-overlay"></div>
+
+            <div class="upcoming">
+                <b>Comming Soon</b>
+
+                <div class="video">
+                    <a class="click-area" target="video" draggable="false">
+                        <p class="thumb">
+                            <img src="" alt="썸네일" draggable="false">
+                        </p>
+                        <p class="btn">
+                            <img src="/screen/image/ic_startBtn.svg" alt="재생버튼" draggable="false">
+                        </p>
+                        <div class="idx-text">
+                            <span>[예고편]</span>
+                            <b class="name"></b>
+                        </div>
+                    </a>
+                    <a class="click-area" target="video" draggable="false">
+                        <p class="thumb">
+                            <img src="" alt="썸네일" draggable="false">
+                        </p>
+                        <p class="btn">
+                            <img src="/screen/image/ic_startBtn.svg" alt="재생버튼" draggable="false">
+                        </p>
+                        <div class="idx-text">
+                            <span>[예고편]</span>
+                            <b class="name"></b>
+                        </div>
+                    </a>
+                    <a class="click-area" target="video" draggable="false">
+                        <p class="thumb">
+                            <img src="" alt="썸네일" draggable="false">
+                        </p>
+                        <p class="btn">
+                            <img src="/screen/image/ic_startBtn.svg" alt="재생버튼" draggable="false">
+                        </p>
+                        <div class="idx-text">
+                            <span>[예고편]</span>
+                            <b class="name"></b>
+                        </div>
+                    </a>
+                    <a class="click-area" target="video" draggable="false">
+                        <p class="thumb">
+                            <img src="" alt="썸네일" draggable="false">
+                        </p>
+                        <p class="btn">
+                            <img src="/screen/image/ic_startBtn.svg" alt="재생버튼" draggable="false">
+                        </p>
+                        <div class="idx-text">
+                            <span>[예고편]</span>
+                            <b class="name"></b>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== top10 탭 ========== -->
+        <div class="top-tab tab">
+            <button class="active">영화</button>
+            <button>TV 프로그램</button>
+        </div>
+
+        <section>
+            <article class="top-movies top-contents active">
+                <h2>영화 TOP 10</h2>
+                <div class="top10 wrapper drag-area"></div>
+            </article>
+
+            <article class="top-tv top-contents">
+                <h2>TV프로그램 TOP 10</h2>
+                <div class="top10 wrapper drag-area"></div>
+            </article>
+        </section>
+
+        <!-- ========== 추천 탭 ========== -->
+        <div class="recommend-tab tab">
+            <button class="active">전체</button>
+            <button>영화</button>
+            <button>TV 프로그램</button>
+        </div>
+
+        <section class="recommend-all recommend-contents active">
+            <article>
+                <div class="main-title">
+                    <h2>추천 영화</h2>
+                    <a class="more" href="movie" data-name="추천 영화">더보기<img src="/screen/image/ic_right.svg"></a>
+                </div>
+                <div class="swiper wrapper mov drag-area"></div>
+            </article>
+            <article>
+                <div class="main-title">
+                    <h2>추천 TV 프로그램</h2>
+                    <a class="more" href="tv" data-name="추천 TV 프로그램">더보기<img src="/screen/image/ic_right.svg"></a>
+                </div>
+                <div class="swiper wrapper tvpro drag-area"></div>
+            </article>
+            <article>
+                <div class="main-title">
+                    <h2>추천 애니메이션</h2>
+                    <a class="more" href="tv" data-name="추천 애니메이션">더보기<img src="/screen/image/ic_right.svg"></a>
+                </div>
+                <div class="swiper wrapper animation drag-area"></div>
+            </article>
+        </section>
+
+        <section class="recommend-movies recommend-contents"></section>
+
+        <section class="recommend-tv recommend-contents"></section>
+    </main>
+
+    <footer>
+        <div class="footer-box">
+            <div class="footer-text">
+                <a class="logo" href="#" draggable="false"><img draggable="false" src="/screen/image/logo-screen.svg" alt="로고"></a>
+                <div>
+                    <b class="contour">이용약관</b>
+                    <b>개인정보처리방침</b>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                <div>
+                    <b>주소</b>
+                    <p>경기도 가평군 가평읍 경반안로 357-187 (경반리 583-34)</p>
+                </div>
+                <div>
+                    <b>대표</b>
+                    <p>박춘하</p>
+                </div>
+                <div>
+                    <b>사업자등록번호</b>
+                    <p>286-11-00158</p>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                <div>
+                    <b>전화번호</b>
+                    <p>031-581-0662</p>
+                </div>
+                <div>
+                    <b>E-mail</b>
+                    <p>daonpension@daon.com</p>
+                </div>
+            </div>
+
+            <div>
+                Copyright@ 2015 SCREEN All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

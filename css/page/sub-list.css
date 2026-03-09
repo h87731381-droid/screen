@@ -1,0 +1,464 @@
+@import url(../reset.css);
+@import url(../common.css);
+
+.search-section {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    padding: 30px 20px 100px 20px;
+    align-items: flex-start;
+}
+
+.back-img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(rgba(26, 26, 26, 0), rgba(26, 26, 26, 0.9));
+    display: flex;
+    justify-content: center;
+}
+
+.back-img img {
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    width: 1920px;
+    /* height: 100vh; */
+    aspect-ratio: 16 / 9;
+    filter: brightness(0.5);
+    position: fixed;
+    z-index: -1;
+}
+
+.main {
+    background-color: rgba(26, 26, 26, 0.9);
+}
+
+.side-menu {
+    width: 263px;
+    background-color: #222222;
+    border-radius: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.side-menu small {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 12px;
+}
+
+
+.spr .spread {
+    width: 100%;
+    background-color: none;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spr.active .spread {
+    background-color: #FF3535;
+}
+
+.spr .spread img {
+    transition: 0.3s;
+}
+
+.spr.active .spread .updown {
+    transform: rotate(180deg);
+}
+
+
+.spr .spread span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.spr .icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: hidden;
+    height: 0;
+}
+
+.spr.active .icons {
+    height: auto;
+    padding: 15px;
+}
+
+.see .icons a {
+    width: 38px;
+    height: 38px;
+}
+
+.see a.active {
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px #FF3535 inset;
+}
+
+.see .icons .netflix {
+    background: url(/screen/image/ic_netflix.svg) center center / cover no-repeat;
+}
+
+.see .icons .appleTV {
+    background: url(/screen/image/ic_appleTV.svg) center center / cover no-repeat;
+}
+
+.see .icons .tving {
+    background: url(/screen/image/ic_tving.svg) center center / cover no-repeat;
+}
+
+.see .icons .wavve {
+    background: url(/screen/image/ic_wavve.svg) center center / cover no-repeat;
+}
+
+.see .icons .disneyplus {
+    background: url(/screen/image/ic_disneyplus.svg) center center / cover no-repeat;
+}
+
+.spr .genre-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    overflow: hidden;
+    height: 0;
+}
+
+.spr.active .genre-btn {
+    height: auto;
+    padding: 12px;
+}
+
+.genre-btn .genBtn {
+    display: inline-block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #353535;
+    padding: 6px 15px;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.genre-btn .genBtn.active {
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 0 2px #FF3535 inset;
+}
+
+.curation {
+    flex: 1;
+    min-width: 0;
+}
+
+.sort-tab {
+    border-bottom: 1px solid #353535;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sort-tab .sort-btn {
+    display: flex;
+    gap: 20px;
+}
+
+.sort-tab img {
+    padding: 0 5px;
+}
+
+.sort-tab a {
+    display: flex;
+    align-items: center;
+    color: #959595;
+    cursor: pointer;
+}
+
+.sort-tab a.active {
+    color: white;
+
+}
+
+.sort-tab a::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: url(/screen/image/ic_point.svg) center center / cover no-repeat;
+}
+
+.sort-tab a.active::before {
+    background: url(/screen/image/ic_check.svg) center center / cover no-repeat;
+}
+
+.objs {
+    width: 100%;
+}
+
+.objs .list {
+    width: 100%;
+    min-width: 0;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.objs .more {
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.objs figure {
+    width: 100%;
+    min-width: 0;
+}
+
+.objs figure .poster {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.objs img {
+    height: 100%;
+    transition: 0.3s;
+}
+
+.objs figure .poster:hover img {
+    transform: scale(1.05);
+}
+
+.objs-txt {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.objs-txt .name {
+    width: 200px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.objs-txt p:nth-of-type(2) {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.objs-txt p:nth-of-type(3)::before {
+    content: '★';
+}
+
+.objs .more {
+    width: 100%;
+    height: 40px;
+    background-color: #FF3535;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.objs .more::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    background: url(/screen/image/ic_down.svg) center center / cover no-repeat;
+}
+
+
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+    .side-menu {
+        width: 220px;
+    }
+
+    .sort-tab {
+        padding: 10px;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .sort-tab h2 {
+        font-size: 18px;
+    }
+
+    .sort-tab img {
+        padding: 0 5px;
+    }
+
+    .sort-tab a {
+        padding: 0 3px;
+        font-size: 12px;
+    }
+}
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:440px) and (max-width:767px) {
+    .search-section {
+        display: block;
+    }
+
+    .side-menu {
+        width: 100%;
+    }
+
+    .sort-tab {
+        padding: 10px;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .sort-tab h2 {
+        font-size: 18px;
+    }
+
+    .sort-tab img {
+        padding: 0 5px;
+    }
+
+    .sort-tab a {
+        padding: 0 3px;
+        font-size: 12px;
+    }
+
+    .sort-tab .sort-btn {
+        gap: 5px;
+    }
+
+    .list {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .list figure {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        border-bottom: 1px solid #383838;
+        padding-bottom: 20px;
+    }
+
+    .list figure .poster {
+        min-width: 100px;
+        max-width: 100px;
+    }
+}
+
+/* 모바일 세로 (해상도 ~ 479px)*/
+@media all and (max-width:439px) {
+    .search-section {
+        display: block;
+        padding: 0 10px;
+    }
+
+    .side-menu {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .side-menu .see {
+        display: none;
+    }
+
+    .side-menu .genre .spread {
+        display: none;
+    }
+
+    .side-menu .genre-btn {
+        flex-wrap: nowrap;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+
+    .genre-btn .genBtn {
+        flex-shrink: 0;
+    }
+
+    .sort-tab {
+        padding: 10px;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .sort-tab h2 {
+        font-size: 18px;
+    }
+
+    .sort-tab img {
+        padding: 0 5px;
+    }
+
+    .sort-tab a {
+        padding: 0 3px;
+        font-size: 12px;
+    }
+
+    .sort-tab .sort-btn {
+        gap: 0;
+    }
+
+    .list figure {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #383838;
+        padding-bottom: 20px;
+    }
+
+    .list figure .poster {
+        width: 100px;
+        min-width: 50px;
+        border-radius: 6px;
+    }
+
+    .genre-btn::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .genre-btn::-webkit-scrollbar-thumb {
+        background-color: #FF3535;
+        border-radius: 5px;
+    }
+
+    .genre-btn::-webkit-scrollbar-track {
+        background-color: #e0e0e0;
+    }
+}

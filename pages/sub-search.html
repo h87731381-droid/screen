@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/screen/css/page/sub-search.css">
+    <link rel="stylesheet" href="/screen/css/page/popup-filmography.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="/screen/javascript/common.js"></script>
+    <script defer src="/screen/javascript/sub-search.js"></script>
+</head>
+<!--이현주 (검색결과 페이지)
+    마지막 수정날짜:26.02.27-->
+
+
+
+<body>
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!--                       header                      -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <header>
+        <div class="header-box">
+            <div class="header-left">
+                <a draggable="false" class="logo" href="/screen/index.html"><img draggable="false" src="/screen/image/logo-screen.svg" alt="로고"></a>
+                <nav>
+                    <a draggable="false" href="sub-list.html?type=movie">영화</a>
+                    <a draggable="false" href="sub-list.html?type=tv">TV</a>
+                </nav>
+            </div>
+
+            <p class="header-icon"><img draggable="false" src="/screen/image/ic_search.svg" alt="검색아이콘"></p>
+        </div>
+    </header>
+
+    <!-- 커서 -->
+    <div class="cursor">
+        <div class="cursor-text">
+            <span></span>
+        </div>
+    </div>
+
+    <main>
+        <!--검색창-->
+        <div class="top-back">
+            <div class="header-search">
+            <form class="header-search-box" action="sub-search.html" autocomplete="off">
+                <input type="text" autocomplete="off" placeholder="검색어를 입력해 주세요" name="keyword">
+                <button></button>
+            </form>
+            <div class="recommend">
+                <b>추천 검색어</b>
+                <div></div>
+            </div>
+        </div>
+        </div>
+
+        
+        <!----------------------내용시작------------------------------------------>
+        <article class="scMain">
+
+             <!-- " 0 " 검색결과 -->
+            <h3></h3>
+
+            <!--탭 메뉴 버튼-->
+            <div class="scMenu">
+                <!-- 
+                    <button class="active">전체(12)</button>
+                    <button>영화(12)</button>
+                    <button>TV프로그램(12)</button>
+                    <button>인물(12)</button> 
+                -->
+            </div>
+
+            <div class="search-wrap">
+                <!--전체 검색결과_인물-->
+                <!-- 
+                <div class="searchAll">
+                    <div class="search">
+                        <b>인물 검색결과(12)</b>
+                    </div>
+                    <div class="searchH">
+                        <figure>
+                            <img draggable="false" src="./screen/image/test_img_H01.jpg" alt="">
+                            <p>송강호</p>
+                        </figure>
+                    </div>
+                </div> -->
+
+                <!--전체 검색결과_영화-->
+                <!-- <div class="searchAll movie">
+                    <div class="search">
+                        <b>영화 검색결과(12)</b>
+                    </div>
+                    <div class="searchList">
+                        <figure>
+                            <img draggable="false" src="./screen/image/test_img01.jpg" alt="">
+                        </figure>
+                    </div>
+                </div> -->
+
+                <!--전체 검색결과_TV-->
+                <!-- <div class="searchAll tv">
+                <div class="search">
+                    <b>TV 프로그램 검색결과(12)</b>
+                </div>
+                <div class="searchList">
+                    <figure>
+                        <img draggable="false" src="./screen/image/test_img01.jpg" alt="">
+                    </figure>
+                </div>
+            </div> -->
+            </div>
+        </article>
+    </main>
+
+        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!--                       footer                      -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <footer>
+        <div class="footer-box">
+            <div class="footer-text">
+                <a class="logo" href="/screen/index.html" draggable="false"><img draggable="false" src="/screen/image/logo-screen.svg" alt="로고"></a>
+                <div>
+                    <b class="contour">이용약관</b>
+                    <b>개인정보처리방침</b>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                <div>
+                    <b>주소</b>
+                    <p>경기도 가평군 가평읍 경반안로 357-187 (경반리 583-34)</p>
+                </div>
+                <div>
+                    <b>대표</b>
+                    <p>박춘하</p>
+                </div>
+                <div>
+                    <b>사업자등록번호</b>
+                    <p>286-11-00158</p>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                <div>
+                    <b>전화번호</b>
+                    <p>031-581-0662</p>
+                </div>
+                <div>
+                    <b>E-mail</b>
+                    <p>daonpension@daon.com</p>
+                </div>
+            </div>
+
+            <div>
+                Copyright@ 2015 SCREEN All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="/screen/javascript/common.js"></script>
+    <script defer src="/screen/javascript/sub-list.js"></script>
+    <link rel="stylesheet" href="/screen/css/page/sub-list.css">
+    <link rel="stylesheet" href="/screen/css/page/popup-filmography.css">
+</head>
+
+<body>
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!--                       header                      -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <header>
+        <div class="header-box">
+            <div class="header-left">
+                <a class="logo" href="/screen/index.html"><img src="/screen/image/logo-screen.svg" alt="로고"></a>
+                <nav>
+                    <a href="/screen/pages/sub-list.html?type=movie">영화</a>
+                    <a href="/screen/pages/sub-list.html?type=tv">TV</a>
+                </nav>
+            </div>
+
+            <p class="header-icon"><img src="/screen/image/ic_search.svg" alt="검색아이콘"></p>
+        </div>
+
+        <div class="header-search">
+            <form class="header-search-box" action="/screen/pages/sub-search.html">
+                <input type="text" autocomplete="off" placeholder="검색어를 입력해 주세요" name="keyword">
+                <button></button>
+            </form>
+            <div class="recommend">
+                <b>추천 검색어</b>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 커서 -->
+    <div class="cursor">
+        <div class="cursor-text">
+            <span></span>
+        </div>
+    </div>
+
+    <div class="back-img"></div>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <!--                        main                       -->
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <div class="main">
+        <section class="search-section">
+            <!-- side menu -->
+            <article class="side-menu">
+                <small>FILTER</small>
+                <div class="see spr active">
+                    <a class="spread">
+                        <span>
+                            <span><img src="/screen/image/ic_see.svg" alt="볼 수 있는곳 아이콘"></span>
+                            <span>볼 수 있는 곳</span>
+                        </span>
+                        <span><img class="updown" src="/screen/image/ic_up.svg" alt=""></span>
+                    </a>
+                    <div class="icons">
+                        <a class="netflix" data-id="8"></a>
+                        <a class="appleTV" data-id="350"></a>
+                        <a class="tving" data-id="1883"></a>
+                        <a class="wavve" data-id="356"></a>
+                        <a class="disneyplus" data-id="337"></a>
+                    </div>
+                </div>
+                <div class="genre spr active">
+                    <a class="spread">
+                        <span>
+                            <span><img src="/screen/image/ic_genre.svg" alt="장르 아이콘"></span>
+                            <span>장르</span>
+                        </span>
+                        <span><img class="updown" src="/screen/image/ic_up.svg" alt=""></span>
+                    </a>
+                    <div class="genre-btn"></div>
+                </div>
+            </article>
+
+            <!-- list -->
+            <article class="movie-list curation">
+                <div class="sort-tab">
+                    <h2>영화</h2>
+
+                    <div class="sort-btn">
+                        <a data-sort="popularity" class="active">인기순</a>
+                        <a data-sort="rating">평점순</a>
+                        <a data-sort="latest">최근작품순</a>
+                    </div>
+                </div>
+
+                <div class="objs">
+                    <div class="list"></div>
+                    <button class="more">More</button>
+                </div>
+            </article>
+        </section>
+        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+        <!--                       footer                      -->
+        <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+        <footer>
+            <div class="footer-box">
+                <div class="footer-text">
+                    <a class="logo" href="/screen/index.html" draggable="false"><img draggable="false" src="/screen/image/logo-screen.svg" alt="로고"></a>
+                    <div>
+                        <b class="contour">이용약관</b>
+                        <b>개인정보처리방침</b>
+                    </div>
+                </div>
+    
+                <div class="footer-text">
+                    <div>
+                        <b>주소</b>
+                        <p>경기도 가평군 가평읍 경반안로 357-187 (경반리 583-34)</p>
+                    </div>
+                    <div>
+                        <b>대표</b>
+                        <p>박춘하</p>
+                    </div>
+                    <div>
+                        <b>사업자등록번호</b>
+                        <p>286-11-00158</p>
+                    </div>
+                </div>
+    
+                <div class="footer-text">
+                    <div>
+                        <b>전화번호</b>
+                        <p>031-581-0662</p>
+                    </div>
+                    <div>
+                        <b>E-mail</b>
+                        <p>daonpension@daon.com</p>
+                    </div>
+                </div>
+    
+                <div>
+                    Copyright@ 2015 SCREEN All Rights Reserved
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

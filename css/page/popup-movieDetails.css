@@ -1,0 +1,480 @@
+
+
+
+
+
+
+
+.drama{font-size: 13px; color: #b0b0b0;}
+.popup .title-span b{font-size: 24px; padding-right: 10px;}
+.popup .title-span span {
+    border: 1px solid #b0b0b0;
+    background-color: black;
+    padding: 5px 5px ;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.popup .title-span small {
+    padding: 15px 0 0 10px;
+    color: #b0b0b0;
+}
+.text {margin: 20px auto; font-weight: bold; font-size: 18px;}
+
+/* =================개요 미국 8부작 / 줄거리====================== */
+.popup-tag{
+    margin: 20px auto;
+    width: 100%;
+}
+.popup-tag p{ font-weight: bold; font-size: 14px;}
+.popup-tag span{ color: #b0b0b0; font-size: 13px}
+
+.popup-text{margin: 20px auto; }
+.popup-text span{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+    width: 100%;
+}
+
+/* ==============별점 해시태그======================================= */
+.popup-tag2{margin: 20px auto;}
+.popup-tag2 b::before{ content: "★ ";}
+.popup-tag2 b{padding-right: 10px;}
+.popup-tag2 span{
+    font-size: 14px;
+    border: 1px solid #b0b0b0;
+    background-color: black;
+    padding: 2px 10px;
+    border-radius: 100px;
+    display: inline-block;   
+}
+
+/* ==============ott 로고======================================= */
+.ott-logo{display: flex; gap: 5px;}
+.ott-logo img{width:30px !important; height:30px !important;}
+
+/* ==============하이라이트======================================= */
+.hig{margin: 100px auto;}
+
+.hig-img{
+    display: flex;
+    margin: 30px auto;
+    justify-content: space-between;
+    gap: 14px;
+}
+.hig-img p {
+    width: 510px; 
+    aspect-ratio: 16 / 9;
+}
+.hig-img img {width: 100%; }
+
+/* ===========================주요출연진======================================== */
+.actor{margin: 100px auto;}
+
+.act{
+    display: flex;
+    overflow-x: auto;
+    margin: 30px auto;
+    gap: 20px;  
+}
+
+.act-profi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+    flex-shrink: 0;
+    /* scroll-snap-align: start; */
+    
+}
+
+.act-profi p{
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+}
+
+.act-profi p img{
+    object-fit: cover;
+    /* border-radius: 100%; */
+    /* width: 60px; height: 60px; */
+    transition: 0.3s;
+}
+
+
+.act-profi b{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 8px;
+    line-height: 1.2;
+    
+    height: 36px;              /* ⭐ 두 줄 높이 고정 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* 2줄까지만 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 배역 이름 */
+.act-profi span{
+    text-align: center;
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 4px;
+}
+
+/* =============관련 콘텐츠======================================== */
+
+.content-mov{
+    margin: 100px auto;
+}
+
+.mov-img {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px auto;
+}
+.mov-img img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =============hover 확대효과======================================== */    
+
+.act-profi{
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.act-profi p:hover{
+    /* transform: scale(1.08); */
+}
+
+/* =============선택카드 강조======================================== */
+
+
+.act-profi.active{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============반응형======================================== */    
+
+
+@media screen and (max-width:1024px) and (min-width:481px){
+    .popup{width: 80%; margin: 0 auto; }
+    .popup .title{    
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .popup .title-txt{
+        padding-left: 0;
+        padding-top: 20px;
+        width: 100%; min-width: 0;
+    }
+
+    .poster{ 
+        display: flex;
+        justify-content: center;
+    }
+    .poster .detail-img{
+        width: 100%;
+        max-width: 250px; 
+        text-align: center;
+    }
+
+    .drama{font-size: 10px; color: #b0b0b0;}
+    
+    .popup .title-span b{font-size: 20px; padding-right: 10px;}
+    .popup .title-span span {
+        border: 1px solid #b0b0b0;
+        background-color: black;
+        padding-top: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    .popup .title-span small {
+        padding: 12px 0 0 10px;
+        color: #b0b0b0;
+        font-size: 10px;
+    }
+    .text {margin: 15px auto; font-weight: bold; font-size: 15px;}
+
+    /* =================개요 미국 8부작 / 줄거리====================== */
+    .popup-tag{margin: 20px auto;}
+    .popup-tag p{ font-weight: bold; font-size: 12px;}
+    .popup-tag span{ color: #b0b0b0; font-size: 11px}
+
+    
+    .popup-text span{
+        margin: 8px auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: break-word;
+    }
+
+    /* ==============별점 해시태그======================================= */
+    .popup-tag2{margin: 20px auto;}
+    .popup-tag2 b::before{ content: "★ ";}
+    .popup-tag2 b{padding-right: 10px; font-size: 14px;}
+    .popup-tag2 span{
+        font-size: 12px;
+        border: 1px solid #b0b0b0;
+        background-color: black;
+        padding: 2px 10px;
+        border-radius: 100px;
+        display: inline-block;   
+    }
+
+    /* ==============ott 로고======================================= */
+    .ott-logo{display: flex; gap: 10px;}
+    
+    /* ==============하이라이트======================================= */
+    .hig{margin: 0 auto;}
+
+    .hig-img{
+        display: flex;
+        margin: 10px auto;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    .hig-img p {width: 100%;}
+    .hig-img img {width: 100%;}
+
+    /* =============주요출연진======================================== */
+    .actor{margin: 0 auto;}
+
+    .act{
+        display: flex;
+        overflow-x: auto;
+        gap: 18px;  
+        padding: 0 24px;
+    }
+
+    .act-profi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 auto ;
+        scroll-snap-align: start;
+    }
+
+    
+    .act-profi p img{
+        object-fit: cover;
+        /* width: 70px; height: 70px; */
+    }
+    .act-profi b{
+    font-size: 15px;
+    margin-top: 8px;
+    line-height: 1.2;
+    
+    height: 36px;              /* ⭐ 두 줄 높이 고정 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* 2줄까지만 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 배역 이름 */
+.act-profi span{
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 4px;
+}
+
+/* =============관련 콘텐츠======================================== */
+
+    .content-mov{
+        margin: 0 auto;
+    }
+
+    .mov-img{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .mov-img>p>img{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+        
+}
+
+@media screen and (max-width:480px){
+    .popup{width: 80%; margin: 0 auto; }
+    .popup .title{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .popup .title-txt{
+        padding-left: 0;
+        padding-top: 20px;
+        width: 100%; min-width: 0;
+    }
+
+    .poster{ 
+        display: flex;
+        justify-content: center;
+    }
+    .poster .detail-img{
+        width: 100%;
+        max-width: 250px; 
+    }
+
+    .drama{font-size: 10px; color: #b0b0b0;}
+
+    .popup .title-span b{font-size: 20px; padding-right: 10px;}
+    .popup .title-span span {
+        border: 1px solid #b0b0b0;
+        background-color: black;
+        padding-top: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    .popup .title-span small {
+        padding: 12px 0 0 10px;
+        color: #b0b0b0;
+        font-size: 10px;
+    }
+    .text {margin: 15px auto; font-weight: bold; font-size: 15px;}
+
+    /* =================개요 미국 8부작 / 줄거리====================== */
+    .popup-tag{margin: 20px auto;}
+    .popup-tag p{ font-weight: bold; font-size: 12px;}
+    .popup-tag span{ color: #b0b0b0; font-size: 11px}
+
+    
+    .popup-text span{
+        margin: 8px auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: break-word;
+    }
+
+    /* ==============별점 해시태그======================================= */
+    .popup-tag2{
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .popup-tag2 b::before{ content: "★ ";}
+    .popup-tag2 b{
+        padding-right: 10px; font-size: 14px;
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+    .popup-tag2 span{
+        font-size: 12px;
+        border: 1px solid #b0b0b0;
+        background-color: black;
+        padding: 2px 10px;
+        border-radius: 100px;
+        display: inline-block;   
+    }
+
+    /* ==============ott 로고======================================= */
+    .ott-logo{display: flex; gap: 10px;}
+    
+    /* ==============하이라이트======================================= */
+    .hig{margin: 0 auto;}
+
+    .hig-img{
+        display: flex;
+        margin: 10px auto;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    .hig-img p {width: 50%; height: 20%;}
+    .hig-img img {width: 100%;}
+
+    /* =============주요출연진======================================== */
+    .actor{margin: 0 auto;}
+
+    .act{
+        display: flex;
+        overflow-x: auto;
+        gap: 14px;  
+        padding: 0 20px;
+    }
+
+    .act-profi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 110px ;
+        scroll-snap-align: start;
+        padding-bottom: 20px;
+    }
+
+    
+    .act-profi p img{
+        object-fit: cover;
+        /* border-radius: 50%; */
+        /* width: 55px; height: 55px; */
+    }
+    .act-profi b{
+    font-size: 15px;
+    margin-top: 8px;
+    line-height: 1.2;
+    
+    height: 36px;              /* ⭐ 두 줄 높이 고정 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* 2줄까지만 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 배역 이름 */
+.act-profi span{
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 4px;
+}
+
+/* =============관련 콘텐츠======================================== */
+
+    .content-mov{
+        margin: 0 auto;
+    }
+
+    .mov-img{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    .mov-img>p>img{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+        
+}
+
+
+
+
+
